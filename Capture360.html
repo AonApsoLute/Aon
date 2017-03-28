@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+ <input id="valR" type="range" min="0" max="179" value="0" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)" />
+    <span id="range">0</span><br>
+    <img id="img">
+
+<script>
+    
+    var val = document.getElementById("valR").value;
+        document.getElementById("range").innerHTML=val;
+        document.getElementById("img").src = "positive_"+ val + ".jpg";
+        function showVal(newVal){
+          document.getElementById("range").innerHTML=newVal;
+          document.getElementById("img").src = "positive_"+newVal+ ".jpg";
+        }
+</script>
+
+</body>
+</html>
